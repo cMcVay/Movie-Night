@@ -35,6 +35,8 @@ The style is simple and high contrast.
 
 ## Updates
 
+* Responsiveness
+    * Add responsive styling for phone screen
 * Results Styling
     * Show only the top 3 options (unless ties)
     * Center the list
