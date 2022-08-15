@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# Movie Night
+Movie Night is a movie picking app that was created to help myself and my partner choose which movie to watch on any given evening. The app consists of a survey that then calculates the result of which movies are best for us to watch.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
+* Objective
+* Approach
+* Design
+* Updates
+* Creator
 
-## Available Scripts
+## Objective
+An app that provides the optimal movie for a couple to watch based on their current level of attention, openess, and interest in a set of movies chosen by each member of the couple.
 
-In the project directory, you can run:
+## Approach
+I will create a react app since I need the films to be updated with user scores and then produce a result. For the movie objects, I will use a constructor to build an object with a title, description, duration, score depicting the users base preference, and a place for an updated user score based on the survey. The movies will be grouped into a list.
 
-### `npm start`
+Users will first input a score that represents their current level of attention and openess. This will filter the list of movies to just the movies that match the attention level or *openess level.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+*_Openess will be how willing the user is to watch something that has a lower base preference score._
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Users will then rate each film based on their current interest in watching it.
 
-### `npm test`
+After running through the list for each user, the app will show the top results.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Design
+The main app component renders the page with three different options for content. The options are determined by a stage variable that was set as part of the state. When the user presses the submit button, the stage is set with the next stage until completed. The survey gives buttons for the user to rate each question or film on a 0-4 scale. These numbers were chosen to give the user the least amount of options that would still effectively divide up levels of interest, and allow for 0 to conicide with a complete lack of interest. 
 
-### `npm run build`
+The buttons update the state for the current film. Then pressing submit saves those score values to the film's score keys. Then the film updates and the score is reset to 0.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Pressing submit on the final film has the film list sort and display the top options.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The style is simple and high contrast. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Updates
 
-### `npm run eject`
+* Results Styling
+    * Show only the top 3 options (unless ties)
+    * Center the list
+    * Hide scores, allow to be seen by clicking button
+    * Include movie posters
+* Movie Card
+    * Add streaming availability
+    * Add back button
+    * Add a page number at top _ex. Movie 2 of 7_
+* React-Redux
+    * Possibly breaking react rules with side effects
+    * Implement redux toolkit js
+* Back End
+    * Long term, create a database for the movie list
+    * Allow adding and deleting movie from list
+    * Track movie scores across multiple survey results
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Creator
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This app is created by Connor Ross McVay.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
