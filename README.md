@@ -1,7 +1,7 @@
 # Movie Night
 Movie Night is a movie picking app that was created to help myself and my partner choose which movie to watch on any given evening. The app consists of a survey that then calculates the result of which movies are best for us to watch.
 
-Movie Night App[https://flourishing-youtiao-bd3842.netlify.app/]
+[Movie Night App](https://flourishing-youtiao-bd3842.netlify.app/)
 
 ## Table of Contents
 * Objective
